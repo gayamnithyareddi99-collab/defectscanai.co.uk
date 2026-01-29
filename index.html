@@ -213,7 +213,7 @@ section p.center{
 .cta p{font-size:18px;}          
 .cta button{          
   background:white;          
-  color:#0a2540;          
+  color:#0f1316;          
   border:none;          
   padding:14px 36px;          
   font-size:16px;          
@@ -235,15 +235,18 @@ input,textarea{
   border-radius:8px;          
   border:1px solid #ccc;          
 }          
-form button{          
-  width:100%;          
-  background:var(--dark);          
-  color:white;          
-  padding:14px;          
-  border:none;          
-  border-radius:30px;          
-  font-weight:bold;          
-}          
+.cta form button{
+  width:100%;
+  background:#01baef;   /* BUTTON COLOR */
+  color:#ffffff;        /* TEXT COLOR (WHITE) */
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+
           
 /* FOOTER */          
 footer{          
@@ -345,6 +348,13 @@ footer{
   }
 }
 
+.cta{
+  background:#0b4f6c;   /* DARK BLUE */
+  color:white;
+  text-align:center;
+  padding:80px 40px;
+}
+
 </style>
           
 </head>          
@@ -378,11 +388,9 @@ function toggleMenu(){
 <!-- HERO -->
 <div class="hero" id="home">
   <div>
-    <h1>AI-Powered Property Defect Detection & Compliance</h1>
+    <h1>AI-Powered Property Defect Detection & Regulatory Compliance</h1>
     <p>
-      DefectScan AI is a UK-focused SaaS platform that uses computer vision,
-      3D analysis, and predictive intelligence to automate property inspections,
-      detect defects early, and ensure regulatory compliance at scale.
+      DefectScan AI is a UK-focused SaaS platform that uses advanced computer vision, 3D analysis, and predictive intelligence to automate property inspections, detect defects early, and ensure regulatory compliance at scale.
     </p>
     <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
       Request Demo
@@ -405,7 +413,7 @@ function toggleMenu(){
     #about-us{
       padding:90px 8%;
       background:#ffffff;
-      color:#1b1f3b;
+      color:#0b4f6c;
     }
 
     #about-us h2{
@@ -426,11 +434,11 @@ function toggleMenu(){
     #about-us p{
       font-size:18px;
       line-height:1.7;
-      color:#444;
+      color:#1d1c1c;
     }
 
     #about-us .image-box{
-      background:#f4f6ff;
+      background:#345263;
       border-radius:18px;
       padding:30px;
       display:flex;
@@ -458,21 +466,22 @@ function toggleMenu(){
   <div class="content">
 
     <div>
-      <p>
-        DefectScan AI was created to modernise property inspections using
-        artificial intelligence and data-driven intelligence. Traditional
-        inspection methods are time-consuming, inconsistent, and difficult
-        to scale across large rental portfolios.
-      </p>
+  <p>
+    DefectScan AI was created to modernise property inspections through
+    advanced artificial intelligence and data-driven insight. Traditional
+    inspection methods are slow, inconsistent, and difficult to scale across
+    large rental and housing portfolios.
+  </p>
 
-      <p>
-        Our platform combines computer vision, predictive analytics, and
-        compliance intelligence to deliver faster, objective, and audit-ready
-        property insights. We help landlords, housing providers, and operators
-        reduce risk, improve safety, and meet regulatory requirements with
-        confidence.
-      </p>
-    </div>
+  <p>
+    Our platform combines computer vision, predictive analytics, and
+    compliance intelligence to deliver fast, objective, and audit-ready
+    property insights. We help landlords, housing providers, and property
+    operators reduce risk, improve safety, and meet regulatory requirements
+    with confidence.
+  </p>
+</div>
+
 
     <!-- Embedded SVG Image (NO LINK USED) -->
     <div class="image-box">
@@ -496,7 +505,7 @@ function toggleMenu(){
     #features {          
       padding: 80px 8%;          
       background: #fcfcff;          
-      color: #0c0101;          
+      color: #0b4f6c;          
     }          
           
     #features h2 {          
@@ -605,7 +614,7 @@ function toggleMenu(){
     #advanced-features{          
       padding:80px 8%;          
       background:#f9fafd;          
-      color:#110000;          
+      color:#0b4f6c;          
     }          
           
     #advanced-features h2{          
@@ -650,7 +659,8 @@ function toggleMenu(){
       font-size:15px;          
       opacity:0.85;          
       margin:0;          
-    }          
+    }
+              
   </style>          
           
   <h2>Advanced Intelligence Features</h2>          
@@ -715,7 +725,7 @@ function toggleMenu(){
     #how-it-works{          
       padding:80px 8%;          
       background:#ffffff;          
-      color:#0e0d0d;          
+      color:#0b4f6c;          
     }          
           
     #how-it-works h2{          
@@ -802,7 +812,7 @@ function toggleMenu(){
     #use-cases{          
       padding:80px 8%;          
       background:#ffffff;          
-      color:#050505;          
+      color:#0b4f6c;          
     }          
           
     #use-cases h2{          
@@ -821,7 +831,7 @@ function toggleMenu(){
       background:#bed1e4;          
       padding:30px;          
       border-radius:18px;          
-      box-shadow:0 10px 26px rgba(0,0,0,0.35);          
+      box-shadow:0 10px 26px rgba(0, 0, 0, 0.35);          
       text-align:left;          
     }          
           
@@ -881,15 +891,14 @@ function toggleMenu(){
 </section>          
           
 <div class="cta" id="contact">
+  
   <span class="cta-label">GET IN TOUCH</span>
 
   <h2>Ready to modernise property inspections?</h2>
 
-  <p>
-    Whether you manage a single building or a large property portfolio,
-    DefectScan AI helps you detect issues early, stay compliant, and
-    reduce inspection effort. We’d love to hear how we can support you.
-  </p>
+<p>
+  DefectScan AI enables early defect detection, regulatory compliance, and reduced inspection effort across portfolios of any size.
+</p>
 
   <form>
     <input type="text" placeholder="Name" required />
