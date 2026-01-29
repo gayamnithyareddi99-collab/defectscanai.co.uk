@@ -354,6 +354,16 @@ footer{
   text-align:center;
   padding:80px 40px;
 }
+#services h2{
+  text-align:center;
+  font-size:38px;
+  margin-bottom:10px;
+  color:#25515e;
+}
+#about-us .image-box{
+  background:transparent;
+  padding:0;
+}
 
 </style>
           
@@ -378,6 +388,8 @@ function toggleMenu(){
   <ul class="nav-links" id="navLinks">
     <li><a href="#home">Home</a></li>
     <li><a href="#about-us">About</a></li>
+    <li><a href="#services">Services</a></li>
+
     <li><a href="#features">Features</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -483,21 +495,135 @@ function toggleMenu(){
 </div>
 
 
-    <!-- Embedded SVG Image (NO LINK USED) -->
-    <div class="image-box">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <rect x="30" y="60" width="140" height="90" rx="8" fill="#1b1f5a"/>
-        <rect x="55" y="80" width="30" height="30" fill="#ffffff"/>
-        <rect x="115" y="80" width="30" height="30" fill="#ffffff"/>
-        <rect x="85" y="115" width="30" height="35" fill="#ffffff"/>
-        <rect x="70" y="35" width="60" height="25" rx="6" fill="#00e0c6"/>
-      </svg>
-    </div>
+   <div class="image-box">
+  <img 
+    src="image.png"
+    alt="AI-powered property inspection"
+    style="width:100%; max-width:420px; height:auto; border-radius:14px;"
+  />
+</div>
+
+
 
   </div>
 </section>         
           
-          
+    <!-- SERVICES -->
+<section id="services">
+
+  <style>
+    #services{
+      padding:90px 8%;
+      background:#f8fafc;
+    }
+
+    #services h2{
+      text-align:center;
+      font-size:38px;
+      margin-bottom:10px;
+      color:#0a2540;
+    }
+
+    #services .subtitle{
+      text-align:center;
+      max-width:800px;
+      margin:0 auto 60px;
+      font-size:17px;
+      color:#555;
+    }
+
+    #services .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    #services .service-card{
+      background:#bed1e4;
+      padding:35px;
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      transition:0.3s ease;
+      border-left:5px solid #01baef;
+    }
+
+    #services .service-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px rgba(1,186,239,0.25);
+    }
+
+    #services h3{
+      margin-top:0;
+      font-size:20px;
+      color:#0b4f6c;
+    }
+
+    #services p{
+      font-size:15px;
+      line-height:1.6;
+      color:#000000;
+    }
+  </style>
+
+  <h2>Our Services</h2>
+  <p class="subtitle">
+    Smart, scalable services that modernise property inspections and ensure
+    safety, compliance, and operational efficiency.
+  </p>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      <h3>Automated Property Inspections</h3>
+      <p>
+        AI-powered analysis of images, videos, and scans to detect defects such
+        as damp, cracks, leaks, and structural risks without manual surveys.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Risk & Compliance Analysis</h3>
+      <p>
+        Identify health and safety risks and generate audit-ready compliance
+        reports aligned with UK housing regulations and standards.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Predictive Maintenance Insights</h3>
+      <p>
+        Forecast potential failures early using historical data and AI models,
+        helping reduce repair costs and avoid emergency maintenance.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Portfolio Health Monitoring</h3>
+      <p>
+        Centralised dashboards providing real-time visibility into property
+        conditions across large residential portfolios.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Digital Inspection Records</h3>
+      <p>
+        Secure, cloud-based inspection history and digital property twins for
+        long-term tracking and compliance audits.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>System Integrations & API</h3>
+      <p>
+        Seamless integration with property management systems and enterprise
+        tools via secure APIs.
+      </p>
+    </div>
+
+  </div>
+
+</section>      
 <!-- FEATURES : HTML + CSS (2 in 1) -->          
 <section id="features" class="dark">          
           
@@ -603,7 +729,8 @@ function toggleMenu(){
       </div>          
       <h3>API & Dashboard</h3>          
       <p>Integrates with PMS & analytics dashboards.</p>          
-    </div>          
+    </div>  
+            
           
   </div>          
 </section>          
