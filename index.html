@@ -418,7 +418,8 @@ function toggleMenu(){
   </div>
 </div>          
           
-<!-- ABOUT US : HTML + CSS (2 in 1, embedded image) -->
+        
+<!-- ABOUT US : HTML + CSS -->
 <section id="about-us">
 
   <style>
@@ -435,7 +436,7 @@ function toggleMenu(){
     }
 
     #about-us .content{
-      max-width:1000px;
+      max-width:1100px;
       margin:0 auto;
       display:grid;
       grid-template-columns:1.1fr 0.9fr;
@@ -450,19 +451,20 @@ function toggleMenu(){
     }
 
     #about-us .image-box{
-      background:#345263;
-      border-radius:18px;
-      padding:30px;
+      background:#f3f6f9;
+      border-radius:20px;
+      padding:20px;
       display:flex;
       justify-content:center;
       align-items:center;
-      box-shadow:0 12px 28px rgba(0,0,0,0.1);
+      box-shadow:0 12px 28px rgba(0,0,0,0.08);
     }
 
-    #about-us svg{
+    #about-us .image-box img{
       width:100%;
-      max-width:260px;
+      max-width:420px;
       height:auto;
+      border-radius:14px;
     }
 
     @media(max-width:900px){
@@ -477,36 +479,35 @@ function toggleMenu(){
 
   <div class="content">
 
+    <!-- TEXT -->
     <div>
-  <p>
-    DefectScan AI was created to modernise property inspections through
-    advanced artificial intelligence and data-driven insight. Traditional
-    inspection methods are slow, inconsistent, and difficult to scale across
-    large rental and housing portfolios.
-  </p>
+      <p>
+        DefectScan AI was created to modernise property inspections through
+        advanced artificial intelligence and data-driven insight. Traditional
+        inspection methods are slow, inconsistent, and difficult to scale across
+        large rental and housing portfolios.
+      </p>
 
-  <p>
-    Our platform combines computer vision, predictive analytics, and
-    compliance intelligence to deliver fast, objective, and audit-ready
-    property insights. We help landlords, housing providers, and property
-    operators reduce risk, improve safety, and meet regulatory requirements
-    with confidence.
-  </p>
-</div>
+      <p>
+        Our platform combines computer vision, predictive analytics, and
+        compliance intelligence to deliver fast, objective, and audit-ready
+        property insights. We help landlords, housing providers, and property
+        operators reduce risk, improve safety, and meet regulatory requirements
+        with confidence.
+      </p>
+    </div>
 
-
-   <div class="image-box">
-  <img 
-    src="image.png"
-    alt="AI-powered property inspection"
-    style="width:100%; max-width:420px; height:auto; border-radius:14px;"
-  />
-</div>
-
-
+    <!-- IMAGE (YOUR PROVIDED IMAGE) -->
+    <div class="image-box">
+      <img 
+        src="image.png"
+        alt="AI powered property inspection dashboard"
+      />
+    </div>
 
   </div>
-</section>         
+</section>
+        
           
     <!-- SERVICES -->
 <section id="services">
