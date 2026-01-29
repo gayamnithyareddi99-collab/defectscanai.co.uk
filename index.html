@@ -251,16 +251,109 @@ footer{
   color:white;          
   text-align:center;          
   padding:20px;          
-}          
+}    
+/* =========================
+   RESPONSIVE FIXES
+   ========================= */
+
+/* Tablets & Mobile */
+@media (max-width: 900px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* HERO */
+  .hero{
+    grid-template-columns:1fr;
+    padding:90px 20px 50px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero button{
+    margin-top:30px;
+  }
+
+  /* SECTIONS */
+  section{
+    padding:60px 20px;
+  }
+
+  section h2{
+    font-size:28px;
+  }
+
+  /* CARDS */
+  .card{
+    padding:24px;
+  }
+
+  .card h3{
+    font-size:17px;
+  }
+
+  .card p{
+    font-size:14px;
+  }
+
+  /* CTA */
+  .cta{
+    padding:60px 20px;
+  }
+
+  .cta h2{
+    font-size:26px;
+  }
+
+  .cta p{
+    font-size:16px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 600px){
+
+  .navbar{
+    padding:0 14px;
+  }
+
+  .logo{
+    font-size:16px;
+  }
+
+  .nav-links a{
+    font-size:15px;
+  }
+
+  input, textarea{
+    font-size:15px;
+  }
+}
+
+/* Desktop only hover (smooth premium feel) */
+@media (hover:hover){
+  .card:hover{
+    transform:translateY(-8px);
+  }
+}
+
 </style>
-<script>
+          
+</head>          
+     <script>
 function toggleMenu(){
   document.getElementById("navLinks").classList.toggle("show");
 }
 </script>
-
-</head>          
-          
+     
 <body>          
           
 <nav class="navbar">
