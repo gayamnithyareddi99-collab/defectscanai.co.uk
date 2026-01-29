@@ -1,0 +1,722 @@
+<!DOCTYPE html>          
+<html lang="en">          
+<head>          
+<meta charset="UTF-8" />          
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>          
+<title>DefectScan AI | Automated Property Inspection</title>          
+          
+<style>          
+:root{          
+  --primary:#0b4f6c;          
+  --secondary:#01baef;          
+  --dark:#0a2540;          
+  --light:#f5f9fc;          
+}          
+          
+*{box-sizing:border-box;}          
+body{          
+  margin:0;          
+  font-family:Arial, Helvetica, sans-serif;          
+  color:#0a2540;          
+  background:#ffffff;          
+}          
+          
+/* NAV */          
+nav{          
+  padding:18px 60px;          
+  display:flex;          
+  justify-content:space-between;          
+  align-items:center;          
+  position:sticky;          
+  top:0;          
+  background:#fff;          
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);          
+  z-index:10;          
+}          
+nav h2{margin:0;color:var(--primary);}          
+nav a{          
+  text-decoration:none;          
+  margin-left:20px;          
+  font-weight:600;          
+  color:#0a2540;          
+}          
+          
+/* HERO */          
+.hero{          
+  padding:100px 60px;          
+  background:linear-gradient(135deg,#0b4f6c,#0a2540);          
+  color:white;          
+  display:grid;          
+  grid-template-columns:1.1fr 0.9fr;          
+  gap:40px;          
+  align-items:center;          
+}          
+.hero h1{font-size:46px;margin-bottom:20px;}          
+.hero p{font-size:18px;line-height:1.6;}          
+.hero button{          
+  padding:14px 32px;          
+  background:var(--secondary);          
+  border:none;          
+  border-radius:30px;          
+  font-size:16px;          
+  font-weight:bold;          
+  cursor:pointer;          
+  margin-top:20px;          
+}          
+          
+/* SECTION */          
+section{          
+  padding:80px 60px;          
+}          
+section h2{          
+  text-align:center;          
+  font-size:36px;          
+  margin-bottom:20px;          
+}          
+section p.center{          
+  max-width:800px;          
+  margin:0 auto 50px;          
+  text-align:center;          
+  font-size:17px;          
+}          
+          
+/* GRID */          
+.grid{          
+  display:grid;          
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));          
+  gap:30px;          
+}          
+          
+/* CARD (enhanced but not changed structurally) */          
+.card{          
+  background:var(--light);          
+  padding:30px;          
+  border-radius:16px;          
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);          
+  position:relative;          
+  transition:all 0.3s ease;          
+  cursor:pointer;          
+}          
+.card::before{          
+  content:"";          
+  position:absolute;          
+  left:0;          
+  top:0;          
+  height:100%;          
+  width:6px;          
+  background:transparent;          
+  border-radius:16px 0 0 16px;          
+  transition:0.3s;          
+}          
+.card:hover{          
+  transform:translateY(-6px);          
+  box-shadow:0 18px 40px rgba(1,186,239,0.25);          
+}          
+.card:hover::before{          
+  background:var(--secondary);          
+}          
+.card h3{margin-top:0;color:var(--primary);}          
+          
+/* DARK */          
+.dark{          
+  background:#f2f6fa;          
+}          
+          
+/* STEPS */          
+.steps .card{          
+  text-align:center;          
+}          
+          
+/* CTA */          
+.cta{          
+  background:linear-gradient(135deg,#01baef,#0b4f6c);          
+  color:white;          
+  text-align:center;          
+  padding:80px 40px;          
+}          
+.cta h2{font-size:38px;}          
+.cta p{font-size:18px;}          
+.cta button{          
+  background:white;          
+  color:#0a2540;          
+  border:none;          
+  padding:14px 36px;          
+  font-size:16px;          
+  border-radius:30px;          
+  font-weight:bold;          
+  margin-top:20px;          
+  cursor:pointer;          
+}          
+          
+/* FORM */          
+form{          
+  max-width:500px;          
+  margin:40px auto 0;          
+}          
+input,textarea{          
+  width:100%;          
+  padding:14px;          
+  margin-bottom:12px;          
+  border-radius:8px;          
+  border:1px solid #ccc;          
+}          
+form button{          
+  width:100%;          
+  background:var(--dark);          
+  color:white;          
+  padding:14px;          
+  border:none;          
+  border-radius:30px;          
+  font-weight:bold;          
+}          
+          
+/* FOOTER */          
+footer{          
+  background:#0a2540;          
+  color:white;          
+  text-align:center;          
+  padding:20px;          
+}          
+</style>          
+</head>          
+          
+<body>          
+          
+<nav>
+  <h2>DefectScan AI</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about-us">About</a>
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>         
+          
+<!-- HERO -->
+<div class="hero" id="home">
+  <div>
+    <h1>AI-Powered Property Defect Detection & Compliance</h1>
+    <p>
+      DefectScan AI is a UK-focused SaaS platform that uses computer vision,
+      3D analysis, and predictive intelligence to automate property inspections,
+      detect defects early, and ensure regulatory compliance at scale.
+    </p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Request Demo
+    </button>
+  </div>
+
+  <div>
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png"
+      width="100%"
+      alt="AI Property Inspection"
+    />
+  </div>
+</div>          
+          
+<!-- ABOUT US : HTML + CSS (2 in 1, embedded image) -->
+<section id="about-us">
+
+  <style>
+    #about-us{
+      padding:90px 8%;
+      background:#ffffff;
+      color:#1b1f3b;
+    }
+
+    #about-us h2{
+      text-align:center;
+      font-size:38px;
+      margin-bottom:30px;
+    }
+
+    #about-us .content{
+      max-width:1000px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    #about-us p{
+      font-size:18px;
+      line-height:1.7;
+      color:#444;
+    }
+
+    #about-us .image-box{
+      background:#f4f6ff;
+      border-radius:18px;
+      padding:30px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      box-shadow:0 12px 28px rgba(0,0,0,0.1);
+    }
+
+    #about-us svg{
+      width:100%;
+      max-width:260px;
+      height:auto;
+    }
+
+    @media(max-width:900px){
+      #about-us .content{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+    }
+  </style>
+
+  <h2>About Us</h2>
+
+  <div class="content">
+
+    <div>
+      <p>
+        DefectScan AI was created to modernise property inspections using
+        artificial intelligence and data-driven intelligence. Traditional
+        inspection methods are time-consuming, inconsistent, and difficult
+        to scale across large rental portfolios.
+      </p>
+
+      <p>
+        Our platform combines computer vision, predictive analytics, and
+        compliance intelligence to deliver faster, objective, and audit-ready
+        property insights. We help landlords, housing providers, and operators
+        reduce risk, improve safety, and meet regulatory requirements with
+        confidence.
+      </p>
+    </div>
+
+    <!-- Embedded SVG Image (NO LINK USED) -->
+    <div class="image-box">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="60" width="140" height="90" rx="8" fill="#1b1f5a"/>
+        <rect x="55" y="80" width="30" height="30" fill="#ffffff"/>
+        <rect x="115" y="80" width="30" height="30" fill="#ffffff"/>
+        <rect x="85" y="115" width="30" height="35" fill="#ffffff"/>
+        <rect x="70" y="35" width="60" height="25" rx="6" fill="#00e0c6"/>
+      </svg>
+    </div>
+
+  </div>
+</section>         
+          
+          
+<!-- FEATURES : HTML + CSS (2 in 1) -->          
+<section id="features" class="dark">          
+          
+  <style>          
+    #features {          
+      padding: 80px 8%;          
+      background: #fcfcff;          
+      color: #0c0101;          
+    }          
+          
+    #features h2 {          
+      text-align: center;          
+      font-size: 38px;          
+      margin-bottom: 50px;          
+    }          
+          
+    #features .grid {          
+      display: grid;          
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));          
+      gap: 28px;          
+    }          
+          
+    #features .card {          
+      background: #bed1e4;          
+      padding: 26px;          
+      border-radius: 18px;          
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);          
+    }          
+          
+    #features .feature-icon {          
+      width: 26px;          
+      height: 26px;          
+      margin-bottom: 10px;          
+    }          
+          
+    #features .feature-icon img {          
+      width: 100%;          
+      height: auto;          
+      display: block;          
+      filter: invert(1);          
+      opacity: 0.9;          
+    }          
+          
+    #features h3 {          
+      margin: 6px 0 8px;          
+      font-size: 18px;          
+    }          
+          
+    #features p {          
+      font-size: 15px;          
+      opacity: 0.85;          
+      margin: 0;          
+    }          
+  </style>          
+          
+  <h2>Platform Features</h2>          
+          
+  <div class="grid">          
+          
+    <div class="card">          
+      <div class="feature-icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png">          
+      </div>          
+      <h3>AI Defect Detection</h3>          
+      <p>Detects cracks, damp, mould, leaks, and risks.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="feature-icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/3063/3063822.png">          
+      </div>          
+      <h3>3D & Depth Analysis</h3>          
+      <p>LiDAR & spatial data reduce false positives.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="feature-icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png">          
+      </div>          
+      <h3>Time-Series Tracking</h3>          
+      <p>Tracks defect progression over time.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="feature-icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828673.png">          
+      </div>          
+      <h3>Digital Property Twin</h3>          
+      <p>Audit-ready property health records.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="feature-icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/942/942748.png">          
+      </div>          
+      <h3>UK Compliance Ready</h3>          
+      <p>Awaab’s Law & HHSRS aligned.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="feature-icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/4248/4248443.png">          
+      </div>          
+      <h3>API & Dashboard</h3>          
+      <p>Integrates with PMS & analytics dashboards.</p>          
+    </div>          
+          
+  </div>          
+</section>          
+<!-- ADVANCED INTELLIGENCE FEATURES : HTML + CSS (2 in 1) -->          
+<section id="advanced-features">          
+          
+  <style>          
+    #advanced-features{          
+      padding:80px 8%;          
+      background:#f9fafd;          
+      color:#110000;          
+    }          
+          
+    #advanced-features h2{          
+      text-align:center;          
+      font-size:38px;          
+      margin-bottom:50px;          
+    }          
+          
+    #advanced-features .grid{          
+      display:grid;          
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));          
+      gap:28px;          
+    }          
+          
+    #advanced-features .card{          
+      background:#bed1e4;          
+      padding:26px;          
+      border-radius:18px;          
+      box-shadow:0 10px 26px rgba(0,0,0,0.35);          
+    }          
+          
+    #advanced-features .icon{          
+      width:26px;          
+      height:26px;          
+      margin-bottom:10px;          
+    }          
+          
+    #advanced-features .icon img{          
+      width:100%;          
+      height:auto;          
+      display:block;          
+      filter:invert(1);          
+      opacity:0.9;          
+    }          
+          
+    #advanced-features h3{          
+      font-size:18px;          
+      margin:6px 0 8px;          
+    }          
+          
+    #advanced-features p{          
+      font-size:15px;          
+      opacity:0.85;          
+      margin:0;          
+    }          
+  </style>          
+          
+  <h2>Advanced Intelligence Features</h2>          
+          
+  <div class="grid">          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/2103/2103633.png">          
+      </div>          
+      <h3>Predictive Maintenance AI</h3>          
+      <p>Forecasts future defects before failures occur.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828640.png">          
+      </div>          
+      <h3>Severity Scoring Engine</h3>          
+      <p>Ranks defects by urgency and risk impact.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/942/942748.png">          
+      </div>          
+      <h3>Automated Compliance Reports</h3>          
+      <p>Instant PDF reports for audits & regulators.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/2910/2910791.png">          
+      </div>          
+      <h3>Contractor Workflow</h3>          
+      <p>Assign repairs and track resolution status.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828919.png">          
+      </div>          
+      <h3>Portfolio Risk Heatmaps</h3>          
+      <p>Visual risk overview across property portfolios.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/3064/3064197.png">          
+      </div>          
+      <h3>Cloud Data Security</h3>          
+      <p>Encrypted storage with role-based access control.</p>          
+    </div>          
+          
+  </div>          
+</section>          
+          
+<!-- HOW IT WORKS : HTML + CSS (2 in 1) -->          
+<section id="how-it-works">          
+          
+  <style>          
+    #how-it-works{          
+      padding:80px 8%;          
+      background:#ffffff;          
+      color:#0e0d0d;          
+    }          
+          
+    #how-it-works h2{          
+      text-align:center;          
+      font-size:38px;          
+      margin-bottom:50px;          
+    }          
+          
+    #how-it-works .steps{          
+      display:grid;          
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));          
+      gap:28px;          
+    }          
+          
+    #how-it-works .card{          
+      background:#bed1e4;          
+      padding:30px;          
+      border-radius:18px;          
+      box-shadow:0 10px 25px rgba(0,0,0,0.35);          
+      text-align:left;          
+    }          
+          
+    #how-it-works .icon{          
+      width:26px;          
+      height:26px;          
+      margin-bottom:12px;          
+    }          
+          
+    #how-it-works .icon img{          
+      width:100%;          
+      height:auto;          
+      display:block;          
+      filter:invert(1) grayscale(100%);          
+      opacity:0.9;          
+    }          
+          
+    #how-it-works h3{          
+      font-size:18px;          
+      margin:6px 0 8px;          
+    }          
+          
+    #how-it-works p{          
+      font-size:15px;          
+      opacity:0.85;          
+      margin:0;          
+    }          
+  </style>          
+          
+  <h2>How It Works</h2>          
+          
+  <div class="steps">          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/833/833524.png">          
+      </div>          
+      <h3>1. Capture</h3>          
+      <p>Upload property images or scan data securely.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/2103/2103633.png">          
+      </div>          
+      <h3>2. AI Analysis</h3>          
+      <p>AI detects, classifies, and evaluates defects.</p>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828919.png">          
+      </div>          
+      <h3>3. Insights</h3>          
+      <p>Actionable reports and compliance insights generated.</p>          
+    </div>          
+          
+  </div>          
+</section>          
+          
+<!-- USE CASES : HTML + CSS (2 in 1) -->          
+<section id="use-cases">          
+          
+  <style>          
+    #use-cases{          
+      padding:80px 8%;          
+      background:#ffffff;          
+      color:#050505;          
+    }          
+          
+    #use-cases h2{          
+      text-align:center;          
+      font-size:38px;          
+      margin-bottom:50px;          
+    }          
+          
+    #use-cases .grid{          
+      display:grid;          
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));          
+      gap:28px;          
+    }          
+          
+    #use-cases .card{          
+      background:#bed1e4;          
+      padding:30px;          
+      border-radius:18px;          
+      box-shadow:0 10px 26px rgba(0,0,0,0.35);          
+      text-align:left;          
+    }          
+          
+    #use-cases .icon{          
+      width:26px;          
+      height:26px;          
+      margin-bottom:12px;          
+    }          
+          
+    #use-cases .icon img{          
+      width:100%;          
+      height:auto;          
+      display:block;          
+      filter:invert(1) grayscale(100%);          
+      opacity:0.9;          
+    }          
+          
+    #use-cases h3{          
+      font-size:18px;          
+      margin:0;          
+    }          
+  </style>          
+          
+  <h2>Who Uses DefectScan AI</h2>          
+          
+  <div class="grid">          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/609/609803.png">          
+      </div>          
+      <h3>Portfolio Landlords</h3>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/2282/2282188.png">          
+      </div>          
+      <h3>Build-to-Rent Operators</h3>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/3064/3064197.png">          
+      </div>          
+      <h3>Social Housing Providers</h3>          
+    </div>          
+          
+    <div class="card">          
+      <div class="icon">          
+        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828673.png">          
+      </div>          
+      <h3>Estate Agents & Insurers</h3>          
+    </div>          
+          
+  </div>          
+</section>          
+          
+<div class="cta" id="contact">
+  <span class="cta-label">GET IN TOUCH</span>
+
+  <h2>Ready to modernise property inspections?</h2>
+
+  <p>
+    Whether you manage a single building or a large property portfolio,
+    DefectScan AI helps you detect issues early, stay compliant, and
+    reduce inspection effort. We’d love to hear how we can support you.
+  </p>
+
+  <form>
+    <input type="text" placeholder="Name" required />
+    <input type="email" placeholder="Email" required />
+    <input type="text" placeholder="Contact" />
+    <textarea placeholder="Your message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>      
+          
+</body>          
+</html>
