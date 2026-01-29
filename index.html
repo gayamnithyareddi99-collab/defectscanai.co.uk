@@ -23,35 +23,97 @@ body{
           
 /* NAV */          
         
-nav{
-  height:48px;                 /* thin menu (3 lines look) */
+/* NAVBAR (IMAGE MODEL STYLE) */
+.navbar{
+  height:56px;
   background:#ffffff;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 24px;
-  position:fixed;              /* IMPORTANT */
+  padding:0 20px;
+  position:fixed;
   top:0;
   left:0;
   right:0;
-  z-index:9999;                /* ABOVE image */
-  box-shadow:0 1px 4px rgba(0,0,0,0.08);
+  z-index:9999;
+  border-bottom:1px solid #e6e6e6;
 }
 
-nav h2{
-  font-size:16px;
-  margin:0;
-  line-height:1;
-}
-
-nav a{
-  font-size:14px;
-  margin-left:18px;
-  line-height:1;
-  padding:0;
-  text-decoration:none;
+.logo{
+  font-size:18px;
+  font-weight:700;
   color:#0a2540;
 }
+
+/* Hamburger */
+.menu-icon{
+  width:26px;
+  cursor:pointer;
+}
+
+.menu-icon span{
+  display:block;
+  height:3px;
+  background:#0a2540;
+  margin:5px 0;
+  border-radius:2px;
+}
+
+/* Menu links */
+.nav-links{
+  list-style:none;
+  position:absolute;
+  top:56px;
+  right:0;
+  background:#ffffff;
+  width:100%;
+  display:none;
+  flex-direction:column;
+  border-bottom:1px solid #ddd;
+}
+
+.nav-links li{
+  border-top:1px solid #eee;
+}
+
+.nav-links a{
+  display:block;
+  padding:14px 20px;
+  text-decoration:none;
+  color:#0a2540;
+  font-weight:600;
+}
+
+/* Show menu */
+.nav-links.show{
+  display:flex;
+}
+
+/* Desktop view */
+@media(min-width:900px){
+  .menu-icon{
+    display:none;
+  }
+
+  .nav-links{
+    position:static;
+    display:flex !important;
+    flex-direction:row;
+    width:auto;
+    background:none;
+    border:none;
+  }
+
+  .nav-links li{
+    border:none;
+  }
+
+  .nav-links a{
+    padding:0;
+    margin-left:20px;
+  }
+}
+
         
           
 /* HERO */          
@@ -190,21 +252,35 @@ footer{
   text-align:center;          
   padding:20px;          
 }          
-</style>          
+</style>
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+
 </head>          
           
 <body>          
           
-<nav>
-  <h2>DefectScan AI</h2>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#about-us">About</a>
-    <a href="#features">Features</a>
-    <a href="#how-it-works">How It Works</a>
-    <a href="#contact">Contact</a>
+<nav class="navbar">
+  <div class="logo">DefectScan AI</div>
+
+  <div class="menu-icon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-</nav>         
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about-us">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+         
           
 <!-- HERO -->
 <div class="hero" id="home">
